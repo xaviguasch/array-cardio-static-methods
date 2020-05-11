@@ -145,8 +145,19 @@
       console.log(lastIndex)
 
       // Check if hot sauce is in the toppings with includes()
+      const isInToppings = toppings.includes('Hot Sauce')
+      console.log(isInToppings)
+
       // add it if it's not
+      if (!isInToppings) {
+        toppings.push('Hot Sauce')
+      }
       // flip those toppings around with reverse()
+      // toppings.reverse()
+      // console.log(toppings)
+
+      const toppingsReversed = [...toppings].reverse()
+      console.log(toppingsReversed)
 
       /*
   Callback Methods
