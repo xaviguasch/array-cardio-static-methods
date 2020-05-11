@@ -169,15 +169,35 @@
 
       // find all ratings that are above 2 with filter()
 
-      const goodReviews = feedback.filter((feedItem) => feedItem.rating >= 2)
+      const goodReviews = feedback.filter((feedItem) => feedItem.rating > 2)
 
       console.log(goodReviews)
 
       // find all ratings that talk about a burger with filter()
+      const burgRatings = feedback.filter((feedItem) => feedItem.comment.includes('burg'))
+
+      console.log(burgRatings)
+
       // Remove the one star rating however you like!
 
+      const removeOneStar = feedback.filter((feedItem) => feedItem.rating !== 1)
+
+      console.log(removeOneStar)
+
       // check if there is at least 5 of one type of meat with some()
+
+      const isThereEnough = Object.values(meats).some((meatValue) => meatValue >= 5)
+
+      console.log(isThereEnough)
+
       // make sure we have at least 3 of every meat with every()
+
+      const isThereEnoughOfEvery = Object.values(meats).every(
+        (meatValue) => meatValue >= 3
+      )
+
+      console.log(isThereEnoughOfEvery)
+
       // sort the toppings alphabetically with sort()
       // sort the order totals from most expensive to least with .sort()
       // Sort the prices with sort()
